@@ -1,0 +1,24 @@
+{
+  "name": "fast-graph-prototype",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "start": "vite --port 5175"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apache-arrow": "^17.0.0",
+    "flot": "^4.2.6",
+    "jquery": "3.7.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "babel-cli": "^6.14.0",
+    "babel-plugin-external-helpers-2": "^6.3.13",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3"
+  }
+}

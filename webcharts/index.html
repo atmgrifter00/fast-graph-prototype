@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../node_modules/ni-webcharts/styles/webchartsLight.css" />
+    <script defer type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer type="text/javascript" src="../node_modules/flot/lib/jquery.event.drag.js"></script>
+    <script defer type="text/javascript" src="../node_modules/flot/lib/jquery.mousewheel.js"></script>
+    <script defer type="text/javascript" src="../node_modules/flot/dist/es5/jquery.flot.js"></script>
+    <script defer type="text/javascript" src="../node_modules/flot-plugins/dist/es5/NationalInstruments/jquery.flot.plugins.js"></script>
+    <script defer type="text/javascript" src="../node_modules/three/build/three.min.js"></script>
+    <script defer type="text/javascript" src="../node_modules/flot-glplotter-plugin/jquery.flot.glplotter.js"></script>
+    <script defer type="text/javascript" src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script defer type="text/javascript" src="../node_modules/@ni-kismet/jqx-element/source/jqxelement-polyfills.js"></script>
+    <script defer type="text/javascript" src="../node_modules/@ni-kismet/jqx-element/source/jqxelement.js"></script>
+    <script defer type="text/javascript" src="../node_modules/ni-data-types/dist/es5-minified/ni-data-types.min.js"></script>
+    <script defer type="text/javascript" src="../node_modules/ni-webcharts/dist/es6-minified/element.min.js"></script>
+    <script defer type="text/javascript" src="../node_modules/ni-webcharts/dist/es6-minified/webcharts.min.js"></script>
+    <script defer type="text/javascript" src="../node_modules/ni-webcharts/dist/es6-minified/element_registration.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <ni-cartesian-graph id="graph1" style="width: 1500px; height: 500px">
+          <ni-cartesian-axis show show-ticks show-minor-ticks show-label label="Time (years before present)" axis-position="bottom"></ni-cartesian-axis>
+          <ni-cartesian-axis show show-ticks show-minor-ticks show-label auto-scale="none" minimum="-2" maximum="12" label="Temperature variations (&#176; C)" axis-position="left" grid-lines></ni-cartesian-axis>
+          <ni-cartesian-plot show >
+              <ni-cartesian-plot-renderer line-width="1.5" line-stroke="#FF0000"></ni-cartesian-plot-renderer>
+          </ni-cartesian-plot>
+          <ni-cartesian-plot show >
+              <ni-cartesian-plot-renderer line-width="1.5" line-stroke="#00FF00"></ni-cartesian-plot-renderer>
+          </ni-cartesian-plot>
+          <ni-cartesian-plot show >
+            <ni-cartesian-plot-renderer line-width="1.5" line-stroke="#0000FF"></ni-cartesian-plot-renderer>
+        </ni-cartesian-plot>
+        <ni-cartesian-plot show >
+          <ni-cartesian-plot-renderer line-width="1.5" line-stroke="#FFFF00"></ni-cartesian-plot-renderer>
+        </ni-cartesian-plot>
+      </ni-cartesian-graph>
+      <button id="start">Start</button>
+      <div id="time_ms"></div>
+    </div>
+    <script type="module" src="index.ts"></script>
+  </body>
+</html>

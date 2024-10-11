@@ -1,0 +1,22 @@
+{
+  "name": "fast-graph-prototype",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "ch:plotly-dev": "cd plotly && vite",
+    "ch:echarts-dev": "cd echarts && vite --port 5174",
+    "ch:webcharts-dev": "cd webcharts vite --port 5175",
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apache-arrow": "^17.0.0",
+    "echarts": "^5.5.1",
+    "plotly.js-strict-dist-min": "^2.35.2",
+    "tslib": "^2.2.0",
+    "typescript": "~5.4.5",
+    "vite": "^5.3.4"
+  }
+}
