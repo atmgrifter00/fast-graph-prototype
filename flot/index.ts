@@ -2,16 +2,6 @@ import { tableFromIPC } from 'apache-arrow';
 import { tableIPCData, CHANNELS, SAMPLE_SIZE } from '../data';
 
 const flotElement = document.getElementById('placeholder')!;
-const d1 = [];
-for (var i = 0; i < 14; i += 0.5) {
-	d1.push([i, Math.sin(i)]);
-}
-
-const d2 = [[0, 3], [4, 8], [8, 5], [9, 13]];
-
-// A null signifies separate line segments
-
-const d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
 const flot = $.plot(flotElement, [], { yaxis: { min: -3, max: 12, autoScale: 'none', }, xaxis: { min: 0, max: SAMPLE_SIZE }, zoom: { interactive: true }, pan: { interactive: true } });
 const timeElement = document.getElementById('time_ms')!;
 const dataPerSecElement = document.getElementById('data_per_sec')!;
