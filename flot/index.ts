@@ -2,7 +2,7 @@ import { tableFromIPC } from 'apache-arrow';
 import { tableIPCData, CHANNELS, SAMPLE_SIZE } from '../data';
 
 const flotElement = document.getElementById('placeholder')!;
-const flot = $.plot(flotElement, [], { yaxis: { min: -3, max: 12, autoScale: 'none', }, xaxis: { min: 0, max: SAMPLE_SIZE }, zoom: { interactive: true }, pan: { interactive: true } });
+const flot = $.plot(flotElement, [], { yaxis: { min: -3, max: 12, autoScale: 'none', }, xaxis: { autoScale: 'exact' }, zoom: { interactive: true }, pan: { interactive: true } });
 const timeElement = document.getElementById('time_ms')!;
 const dataPerSecElement = document.getElementById('data_per_sec')!;
 let plotIndex = 0;
@@ -29,7 +29,7 @@ window.setInterval(() => {
     currentTime = performance.now();
 	previousTime = previousTime === 0 ? currentTime : previousTime;
 	flot.setData(flotData);
-	flot.setupGrid();
+	flot.setupGrid(true);
 	flot.draw();
 	totalData += SAMPLE_SIZE * CHANNELS;
 	totalPlotTime += performance.now() - currentTime;

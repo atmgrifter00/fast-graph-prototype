@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "apache-arrow": "^17.0.0",
-    "echarts": "^5.5.1",
+    "echarts": "6.0.0-beta.1",
     "plotly.js-strict-dist-min": "^2.35.2",
     "tslib": "^2.2.0",
     "typescript": "~5.4.5",
